@@ -214,7 +214,7 @@ build-linux:
 	cmake \
 		-S . \
 		-B $(BUILD_DIR)\
-		-DCMAKE_PREFIX_PATH=$(QT_BASE)/$(QT_VERSION)/gcc_64/lib/cmake
+		-DCMAKE_PREFIX_PATH=$(QT_BASE)/$(QT_VERSION)/gcc_64
 
 ## deploy: Compila projeto Linux do zero (configura + compila)
 deploy: build-linux compile
