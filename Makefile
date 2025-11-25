@@ -256,6 +256,7 @@ android-x86:
 		-DCMAKE_FIND_ROOT_PATH=$(QT_BASE)/$(QT_VERSION)/android_x86
 
 ## android-arm64_v8a: Configura CMake para Android ARM 64-bit (recomendado)
+android: android-arm64_v8a  # alias
 android-arm64_v8a:
 	@echo "🤖 Configurando build para Android ARM 64-bit..."
 	cmake \
