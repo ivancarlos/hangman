@@ -61,6 +61,10 @@ ANDROID_NDK_ROOT ?= $(HOME)/Android/Sdk/ndk/26.1.10909125
 
 # Caminho do Android SDK
 ANDROID_SDK_ROOT ?= $(HOME)/Android/Sdk
+# ----------- VERBOSE -------------------
+
+VERBOSE := -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
+           -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 # ----------  KITS DISPONÍVEIS ----------
 
@@ -221,6 +225,7 @@ build-linux:
 	cmake \
 		-S . \
 		-B $(BUILD_DIR)\
+		$(VERBOSE) \
 		-DCMAKE_PREFIX_PATH=$(QT_BASE)/$(QT_VERSION)/gcc_64
 
 ## deploy: Compila projeto Linux do zero (configura + compila)
@@ -246,6 +251,7 @@ android-x86:
 	cmake \
 		-S . \
 		-B $(BUILD_DIR) \
+		$(VERBOSE) \
 		-DCMAKE_TOOLCHAIN_FILE=$(ANDROID_NDK_ROOT)/build/cmake/android.toolchain.cmake \
 		-DANDROID_ABI=x86 \
 		-DANDROID_PLATFORM=android-23 \
@@ -262,6 +268,7 @@ android-arm64_v8a:
 	cmake \
 		-S . \
 		-B $(BUILD_DIR) \
+		$(VERBOSE) \
 		-DCMAKE_TOOLCHAIN_FILE=$(ANDROID_NDK_ROOT)/build/cmake/android.toolchain.cmake \
 		-DANDROID_ABI=arm64-v8a \
 		-DANDROID_PLATFORM=android-23 \
@@ -280,6 +287,7 @@ android-armv7:
 	cmake \
 		-S . \
 		-B $(BUILD_DIR) \
+		$(VERBOSE) \
 		-DCMAKE_TOOLCHAIN_FILE=$(ANDROID_NDK_ROOT)/build/cmake/android.toolchain.cmake \
 		-DANDROID_ABI=armeabi-v7a \
 		-DANDROID_PLATFORM=android-23 \
@@ -295,6 +303,7 @@ android-x86_64:
 	cmake \
 		-S . \
 		-B $(BUILD_DIR) \
+		$(VERBOSE) \
 		-DCMAKE_TOOLCHAIN_FILE=$(ANDROID_NDK_ROOT)/build/cmake/android.toolchain.cmake \
 		-DANDROID_ABI=x86_64 \
 		-DANDROID_PLATFORM=android-23 \
