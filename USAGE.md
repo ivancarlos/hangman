@@ -8,6 +8,30 @@
   make run               - Executa o binário Linux compilado
 ```
 
+# Mudei de 8.0 -> 8.6
+
+```{bash}
+ivan*:  /home/ivan/.config/env/qt
+$ cat   6.5.3/android_arm64_v8a/src/3rdparty/gradle/gradle/wrapper/gradle-wrapper.properties
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.0-bin.zip
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+ivan*:  /home/ivan/.config/env/qt
+$ v   6.5.3/android_arm64_v8a/src/3rdparty/gradle/gradle/wrapper/gradle-wrapper.properties
+229238
+ivan*:  /home/ivan/.config/env/qt
+$ cat   6.5.3/android_arm64_v8a/src/3rdparty/gradle/gradle/wrapper/gradle-wrapper.properties
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.6-bin.zip
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+```
+
+
+# Compila para Android (arm64-v8a)
 
 ```{bash}
   make android-arm64_v8a
