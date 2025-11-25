@@ -8,7 +8,7 @@
   make run               - Executa o binário Linux compilado
 ```
 
-# Mudei de 8.0 -> 8.6
+# Mudei de 8.0 -> 8.6  -- Nao funcionou
 
 ```{bash}
 ivan*:  /home/ivan/.config/env/qt
@@ -31,11 +31,18 @@ zipStorePath=wrapper/dists
 ```
 
 
+# Realizei a cópia do gradle - (Qt oficial -> Qt aqt)
+
+```{bash}
+$ cp -r gradle/ /home/ivan/.config/env/qt/6.5.3/android_arm64_v8a/src/3rdparty
+```
+
 # Compila para Android (arm64-v8a)
 
 ```{bash}
   make android-arm64_v8a
   make compile
+  cp gradle.properties build/android-build   # <- FIX bug
   make info
 ==========================================
   VARIÁVEIS DE AMBIENTE
