@@ -61,10 +61,11 @@ ANDROID_NDK_ROOT ?= $(HOME)/Android/Sdk/ndk/26.1.10909125
 
 # Caminho do Android SDK
 ANDROID_SDK_ROOT ?= $(HOME)/Android/Sdk
+
 # ----------- VERBOSE -------------------
 
-VERBOSE := -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
-           -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+VERBOSE          ?= -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
+                    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 # ----------  KITS DISPONÍVEIS ----------
 
