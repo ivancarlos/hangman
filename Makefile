@@ -272,9 +272,6 @@ android-arm64_v8a:
 		-DANDROID_NDK=$(ANDROID_NDK_ROOT) \
 		-DCMAKE_FIND_ROOT_PATH=$(QT_BASE)/$(QT_VERSION)/android_arm64_v8a
 
-fix:
-	cp gradle.properties build/android-build
-
 ## android-armv7: Configura CMake para Android ARM 32-bit (legacy)
 android-armv7:
 	@echo "🤖 Configurando build para Android ARM 32-bit..."
