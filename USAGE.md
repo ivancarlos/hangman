@@ -76,3 +76,10 @@ $ cp -r gradle/ /home/ivan/.config/env/qt/6.5.3/android_arm64_v8a/src/3rdparty
 
 ```
 
+# OK 🤝
+```{bash}
+  make android-arm64_v8a
+  make compile
+  make fix compile
+  make info
+```
