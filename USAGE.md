@@ -10,6 +10,7 @@
 
 
 ```{bash}
+  android-platform-manager.sh android-35
   make android-arm64_v8a
   make compile
   make info
